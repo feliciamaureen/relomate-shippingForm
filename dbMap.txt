@@ -1,0 +1,36 @@
+company name:
+    shipper name:
+        declarationPass: True/False
+        name
+        mobile
+        email
+        address
+        suburb
+        postcode
+        country
+        parcelServiceType: 
+        
+        #subcollection
+        items:
+            item1:
+                itemName
+                .
+                .
+                .
+
+            item2:
+                itemName
+                .
+                .
+        
+        #nested object
+        receiver: 
+                name
+                mobile
+                email
+                address
+                suburb
+                postcode
+                country
+    
+    
