@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, DateField
+from wtforms import StringField, PasswordField, SubmitField, DateField, RadioField
 from wtforms.validators import DataRequired
 
 #add parcel service type
@@ -33,27 +33,27 @@ class receiver(FlaskForm):
 class dangerousDeclaration(FlaskForm):
     #doesnt actually get stored, validated on fx and main 
     #change to the actual questions
-    q1 = BooleanField('q1', default=False)
-    q2 = BooleanField('q2', default=False)
-    q3 = BooleanField('q3', default=False)
-    q4 = BooleanField('q4', default=False)
-    q5 = BooleanField('q5', default=False)
-    q6 = BooleanField('q6', default=False)
-    q7 = BooleanField('q7', default=False)
-    q8 = BooleanField('q8', default=False)
-    q9 = BooleanField('q9', default=False)
-    q10 = BooleanField('q10', default=False)
-    q11 = BooleanField('q11', default=False)
-    q12 = BooleanField('q12', default=False)
-    q13 = BooleanField('q13', default=False)
-    q14  = BooleanField('q14', default=False)
-    q15 = BooleanField('q15', default=False)
+    q1 = RadioField('q1', choices=[('Yes','yes'),('No','no')])
+    q2 = RadioField('q2', choices=[('Yes','yes'),('No','no')])
+    q3 = RadioField('q3', choices=[('Yes','yes'),('No','no')])
+    q4 = RadioField('q4', choices=[('Yes','yes'),('No','no')])
+    q5 = RadioField('q5', choices=[('Yes','yes'),('No','no')])
+    q6 = RadioField('q6', choices=[('Yes','yes'),('No','no')])
+    q7 = RadioField('q7', choices=[('Yes','yes'),('No','no')])
+    q8 = RadioField('q8', choices=[('Yes','yes'),('No','no')])
+    q9 = RadioField('q9', choices=[('Yes','yes'),('No','no')])
+    q10 = RadioField('q10', choices=[('Yes','yes'),('No','no')])
+    q11 = RadioField('q11', choices=[('Yes','yes'),('No','no')])
+    q12 = RadioField('q12', choices=[('Yes','yes'),('No','no')])
+    q13 = RadioField('q13', choices=[('Yes','yes'),('No','no')])
+    q14 = RadioField('q15', choices=[('Yes','yes'),('No','no')])
+    q15 = RadioField('q15', choices=[('Yes','yes'),('No','no')])
 
     #for digital signature 
     shipperNameSign = StringField('Shipper Name', validators=[DataRequired()])
     date = StringField('Date', validators=[DataRequired()])
 
-    submit = SubmitField('Create New Account')
+    submit = SubmitField('Submit')
 
 class commercialInvoice(FlaskForm):
     itemName = StringField('Item', validators=[DataRequired()])

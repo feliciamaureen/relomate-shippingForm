@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Shipping Form</title>
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body class="body">
+        <header>
+            <div class="information">
+                <p>there is a metric shit ton of information just copy later</p>
+            </div>
+        </header>
+        <div class="container">
+            {% block content %}
+            <div class="pageTitle">
+                <h1>Receiver Information</h1>
+            </div>
+            <div class = "declaration">
+                <form action = "" method="post">
+                {{ form.hidden_tag() }}
+
+                <p>
+                    q1:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q2:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q3:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q4:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q5:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q6:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q7:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q8:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q9:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q11:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q12:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q13:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q14:
+                    {{form.q1()}}
+                </p>
+                <p>
+                    q15:
+                    {{form.q1()}}
+                </p>
+                
+
+                <p>
+                    name:
+                    {{form.shipperNameSign()}}
+                </p>
+                <p>
+                    date:
+                    {{form.date()}}
+                </p>
+                
+                <p>{{ form.submit() }}</p>
+                </form> 
+            </div>
+        {% endblock %}
+        </div>
+    </body>
+
+</html>

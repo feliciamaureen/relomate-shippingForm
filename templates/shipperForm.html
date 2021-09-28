@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Shipping Form</title>
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body class="body">
+        <header>
+            <div class="information">
+                <p>there is a metric shit ton of information just copy this when you finish the logic</p>
+            </div>
+        </header>
+        <div class="container">
+        {% block content %}
+            <div class="pageTitle">
+                <h1>Shipper Information</h1>
+            </div>
+            <div class = "shipperForm">
+                <form action = "" method="post">
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.shipperName.label }}<br>
+                    {{ form.shipperName(size=32) }}
+                </p>
+                <p>
+                    {{ form.shipperMobile.label }}<br>
+                    {{ form.shipperMobile(size=32) }}
+                </p>
+                <p>
+                    {{ form.shipperEmail.label }}<br>
+                    {{ form.shipperEmail(size=32) }}
+                </p>
+
+                <p>
+                    {{ form.shipperAddress.label }}<br>
+                    {{ form.shipperAddress(size=32) }}
+                </p>
+                <p>
+                    {{ form.shipperAddressSuburb.label }}<br>
+                    {{ form.shipperAddressSuburb(size=32) }}
+                </p>
+                <p>
+                    {{ form.shipperAddressState.label }}<br>
+                    {{ form.shipperAddressState(size=32) }}
+                </p>
+                <p>
+                    {{ form.shipperAddressPostCode.label }}<br>
+                    {{ form.shipperAddressPostCode(size=32) }}
+                </p>
+                <p>
+                    {{ form.shipperAddressCountry.label }}<br>
+                    {{ form.shipperAddressCountry(size=32) }}
+                </p>
+
+                <br>
+                
+                <p>{{ form.submit() }}</p>
+                </form> 
+            </div>
+        {% endblock %}
+        </div>
+    </body>
+
+</html>

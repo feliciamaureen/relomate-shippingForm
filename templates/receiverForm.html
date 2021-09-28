@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Shipping Form</title>
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body class="body">
+        <header>
+            <div class="information">
+                <p>there is a metric shit ton of information just copy this when you finish the logic</p>
+            </div>
+        </header>
+        <div class="container">
+        {% block content %}
+            <div class="pageTitle">
+                <h1>Receiver Information</h1>
+            </div>
+            <div class = "receiverForm">
+                <form action = "" method="post">
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.receiverName.label }}<br>
+                    {{ form.receiverName(size=32) }}
+                </p>
+                <p>
+                    {{ form.receiverMobile.label }}<br>
+                    {{ form.receiverMobile(size=32) }}
+                </p>
+                <p>
+                    {{ form.receiverEmail.label }}<br>
+                    {{ form.receiverEmail(size=32) }}
+                </p>
+
+                <p>
+                    {{ form.receiverAddress.label }}<br>
+                    {{ form.receiverAddress(size=32) }}
+                </p>
+                <p>
+                    {{ form.receiverAddressSuburb.label }}<br>
+                    {{ form.receiverAddressSuburb(size=32) }}
+                </p>
+                <p>
+                    {{ form.receiverAddressState.label }}<br>
+                    {{ form.receiverAddressState(size=32) }}
+                </p>
+                <p>
+                    {{ form.receiverAddressPostCode.label }}<br>
+                    {{ form.receiverAddressPostCode(size=32) }}
+                </p>
+                <p>
+                    {{ form.receiverAddressCountry.label }}<br>
+                    {{ form.receiverAddressCountry(size=32) }}
+                </p>
+
+                <br>
+                
+                <p>{{ form.submit() }}</p>
+                </form> 
+            </div>
+        {% endblock %}
+        </div>
+    </body>
+
+</html>
